@@ -85,10 +85,6 @@ DATABASES = {
         'CLIENT': {
             'host': 'mongodb://localhost:27017',
             'port': 27017,
-            'username': '',
-            'password': '',
-            'authSource': '',
-            'authMechanism': '',
         },
     }
 }
