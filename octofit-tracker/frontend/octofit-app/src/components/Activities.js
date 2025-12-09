@@ -16,16 +16,20 @@ const Activities = () => {
   }, [endpoint]);
 
   return (
-    <div className="card p-4 mb-4">
-      <h2 className="card-title mb-3">Activities</h2>
+    <div className="card shadow-lg p-4 mb-4">
+      <div className="d-flex justify-content-between align-items-center mb-3">
+        <h2 className="card-title fw-bold text-primary">Activities</h2>
+        <button className="btn btn-success" type="button">Add Activity</button>
+      </div>
       <div className="table-responsive">
-        <table className="table table-striped table-bordered">
+        <table className="table table-striped table-bordered align-middle">
           <thead className="table-dark">
             <tr>
               <th scope="col">#</th>
               <th scope="col">Name</th>
               <th scope="col">Type</th>
               <th scope="col">Details</th>
+              <th scope="col">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -35,6 +39,11 @@ const Activities = () => {
                 <td>{item.name || '-'}</td>
                 <td>{item.type || '-'}</td>
                 <td>{item.details || JSON.stringify(item)}</td>
+                <td>
+                  <button className="btn btn-primary btn-sm mx-1">View</button>
+                  <button className="btn btn-warning btn-sm mx-1">Edit</button>
+                  <button className="btn btn-danger btn-sm mx-1">Delete</button>
+                </td>
               </tr>
             ))}
           </tbody>
